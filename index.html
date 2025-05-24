@@ -38,26 +38,69 @@
                 <div class="about-col-2">
                   <h1 class="sub-title">About Me</h1>  
                   <p>
-                    I am a passionate Frontend Developer with a knack for creating beautiful and functional web applications. 
-                    I have a strong foundation in HTML, CSS, and JavaScript, and I am always eager to learn new technologies and improve my skills. 
-                    My goal is to build user-friendly interfaces that provide an exceptional user experience.
+                    Seeking an internship in frontend development to apply my skills and knowledge in a real-world setting. I have a strong foundation in HTML, CSS, and JavaScript, and I am always eager to learn new technologies and improve my skills. 
+                    My goal is to build user-friendly interfaces that provide an exceptional user experience and learn from industry professionals.
                   </p>
 
                   <div class="tab-titles">
-                    <p class="tab-links active-link">Skills</p>
-                    <p class="tab-links">Education</p>
-                    <p class="tab-links">Experience</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
 
-                    
+                     
                   </div>
-                    <div class="tab-content">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Frontend</span><br>development for web aplications</li>
-                            <li><span>Frontend</span><br>development for web aplications</li>
-                            <li><span>Frontend</span><br>development for web aplications</li>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>JavaScript</span></li>
+                        </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bachelor of Science (Hons) in Information Technolody<br>2023-present</span></li>
+                            <li><span>Complete Advance Level in Physical Science Stream<br>2020</span></li>
+                            
                         </ul>
             </div>
         </div>
+        <!-- ---------portfolio-------------- -->
+         
+        <div id="Portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="project-list">
+                    <div class="project">
+                        <img src="images/work-1.png">
+                    </div>
+                    <div class="project">
+                        <img src="images/work-2.png">
+                    </div>
+                    <div class="project">
+                        <img src="images/work-3.png">
+                    </div>
+
+                </div>
+            </div>  
+            </div>
+
+
+        <script>
+            var tablinks = document.getElementByClassName("tab-links");
+            var tabcontents = document.getElementByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
     
 </body>
 </html>
