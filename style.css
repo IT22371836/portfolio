@@ -71,7 +71,7 @@ nav ul li a:hover::after{
     color:#ff004f;
 }
 /*-------------about-----*/
-#about{
+#About{
     padding: 80px 0;
     color: #ababab;
 }
@@ -118,7 +118,43 @@ nav ul li a:hover::after{
     bottom: -8px;
     transition: 0.5s;
 }
-.tab-link.active-links::after{
+.tab-links.active-link::after{
     width: 50%;
 
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*----------------portfolio-----------*/
+#portfolio{
+    padding: 50px 0;
+    
+}
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.project{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.project-img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
 }
