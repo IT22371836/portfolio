@@ -5,102 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/429baa35fb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.png" class="logo">
-            <ul>
-                <li><a href="Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#Portfolio">Portfolio</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                </li>
-            </ul>
-            </nav>
-            <div class="header-text">
-                <p>Frontend Developer</p>
-                <h1>Hi, I'm <span>Nadee</span><br> From Sri Lanka</h1>
-            </div>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+        <ul> 
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+        </nav>
+        <div class="header-text">
+        <p>Frontend Developer</p>
+        <h1>Hi, I,m <span>Nadee</span><br>Hewapathirana From Sri Lanka</h1>
         </div>
+     </div>
+  </div>
+
+  <!-------------------about------------------->
+
+  <div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class= "sub-title">About Me</h1>
+                <p>
+                    Seeking an internship in frontend development to enhance user interfaces. I have skilles in HTML, CSS, React and JavaScript. 
+                    My goal is to continuously learn and improve my skills while contributing to exciting projects.</p>
+
+
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>JavaScript</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Bachelor of Science(Hons) in information Technology<br>2023 - present</span></li>
+                        <li><span>Complete Advanced Level in Commerce Stream<br>2019</span></li>
+                    </ul>
+                </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
 
     </div>
-    <!-- ---------------------About ------------------- -->
-
-    <div id="About">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.png">
+</div>
+<!-------------------portfolio------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class= "sub-title">My Project</h1>
+        <div class="project-list">
+            <div class="project">
+                    <img src="images/project-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app contents you yo the talented people around the world.
+                        Download it from play store.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
                 </div>
-                <div class="about-col-2">
-                  <h1 class="sub-title">About Me</h1>  
-                  <p>
-                    Seeking an internship in frontend development to apply my skills and knowledge in a real-world setting. I have a strong foundation in HTML, CSS, and JavaScript, and I am always eager to learn new technologies and improve my skills. 
-                    My goal is to build user-friendly interfaces that provide an exceptional user experience and learn from industry professionals.
-                  </p>
-
-                  <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links"onclick="opentab('education')">Education</p>
-                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
-
-                     
-                  </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>HTML</span></li>
-                            <li><span>CSS</span></li>
-                            <li><span>JavaScript</span></li>
-                        </ul>
+                <div class="project">
+                    <img src="images/project-2.png">
+                    <div class="layer">
+                         <h3>Music App</h3>
+                         <p>The app contents you yo the talented people around the world.
+                        Download it from play store.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/project-3.png">
+                    <div class="layer">
+                        <h3>Online App</h3>
+                        <p>The app contents you yo the talented people around the world.
+                        Download it from play store.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>Bachelor of Science (Hons) in Information Technolody<br>2023-present</span></li>
-                            <li><span>Complete Advance Level in Physical Science Stream<br>2020</span></li>
-                            
-                        </ul>
-            </div>
+            <a href="#" class="btn">See more</a>
         </div>
-        <!-- ---------portfolio-------------- -->
-         
-        <div id="Portfolio">
-            <div class="container">
-                <h1 class="sub-title">My Projects</h1>
-                <div class="project-list">
-                    <div class="project">
-                        <img src="images/work-1.png">
-                    </div>
-                    <div class="project">
-                        <img src="images/work-2.png">
-                    </div>
-                    <div class="project">
-                        <img src="images/work-3.png">
-                    </div>
-
-                </div>
-            </div>  
+    </div>
+<!-------------------contact------------------->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>mihiritharushika030@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+94 77 851 3133</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
             </div>
+            <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 
-        <script>
-            var tablinks = document.getElementByClassName("tab-links");
-            var tabcontents = document.getElementByClassName("tab-contents");
-            function opentab(tabname){
-                for(tablink of tablinks){
-                    tablink.classList.remove("active-link");
+<script>
 
-                }
-                for(tabcontent of tabcontents){
-                    tabcontent.classList.remove("active-tab");
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
 
-                }
-                event.currentTarget.classList.add("active-link");
-                document.getElementById(tabname).classList.add("active-tab");
-            }
-        </script>
-    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
 </body>
 </html>
