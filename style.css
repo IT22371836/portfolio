@@ -101,7 +101,7 @@ nav ul li a:hover::after{
 }
 .tab-links{
     margin-right: 50px;
-    font-size: 18px; 
+    font-size: 25px; 
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -125,7 +125,7 @@ nav ul li a:hover::after{
 }
 .tab-contents ul li span{
     color: #f8f7f7;
-    font-size: 14px;
+    font-size: 20px;
 }
 .tab-contents{
     display: none;
@@ -281,4 +281,30 @@ form .btn2{
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+}
+#About p {
+    font-size: 20px;
+    line-height: 1.7
+}
+
+#Contact p {
+    font-size: 20px;
+    line-height: 1.7;
+}
+.copyright{
+    width:100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #292929;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff0004;
+}
+#msg{
+    color: #61b752;
+    margin-top: 20px;
+    display: block;
+    font-size: 18px;
 }
