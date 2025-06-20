@@ -36,14 +36,14 @@
             <div class="about-col-2">
                 <h1 class= "sub-title">About Me</h1>
 
-                <p>
+                <p px>
                     Seeking an internship in frontend development (web & mobile) to enhance user interfaces and grow professionally. I have skills in HTML, CSS, React and JavaScript. 
                     My goal is to continuously learn and improve my skills while contributing to exciting projects.</p>
                     <p style="margin-top: 20px;">
                     I am a 3rd year 2nd Semester undergraduate pursuing a degree in Information Technology at Sri Lanka Institute of Information Technology located in Malabe - Sri Lanka. I am dedicated to honing my talents and remaining at the forefront of digital innovation.
                 </p>
                 <p style="margin-top: 20px;">
-                    Passionate frontend developer specializing in React. Creating web and mobile apps that are both beautiful and funnctional is my favourite. I have worked on different projects using various frameworks. I'm always learning, exploring new technologies and enhancing my skills to build impactful solutions.
+                    Passionate frontend developer specializing in React. Creating web and mobile apps that are both beautiful and funnctional is my favourite. I have worked on different projects using various frameworks. I'm always learning, exploring new technologies and enhancing my skills to build
                 </p>
 
 
@@ -83,7 +83,7 @@
                     <img src="images/project-1.jpg">
                     <div class="layer">
                         <h2>Online Taxi Reservation System</h2>
-                        <p>An online taxi reservation system built with HTML, CSS, JavaScript, and PHP. It allows users to book rides easily, check availability, and manage reservations in real-time. Designed for a smooth and user-friendly experience with secure and efficient backend processing.</p>
+                        <p><h3>An online taxi reservation system built with HTML, CSS, JavaScript, and PHP. It allows users to book rides easily, check availability, and manage reservations in real-time. Designed for a smooth and user-friendly experience with secure and efficient backend processing.</h3></p>
                         <a href="https://github.com/IT22371836/Online-Taxi-Reservation-System"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                     <img src="images/project-2.jpg">
                     <div class="layer">
                          <h2>Food Delivery Management System</h2>
-                         <p> A full-stack web application built using the MERN stack to manage food orders, restaurant data, and delivery tracking efficiently. It features user authentication, admin and customer dashboards, and real-time order status updates. Integrated Power BI dashboards provide advanced analytics and insights into orders and  delivery performance. Designed for a smooth and responsive user experience across all devices</p>
+                         <p><h3>A full-stack web application built using the MERN stack to manage food orders, restaurant data, and delivery tracking efficiently. It features user authentication, admin and customer dashboards, and real-time order status updates. Integrated Power BI dashboards provide advanced analytics and insights into orders and  delivery performance. Designed for a smooth and responsive user experience across all devices</h3></p>
                          <a href="https://github.com/IT22371836/Food-Delivery-Management-System-full-project"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
@@ -107,12 +107,12 @@
                     <img src="images/project-4.jpg">
                     <div class="layer">
                          <h2>Photography Social Media Platform</h2>
-                         <p><h3>A full-stack web application built using the MERN stack to manage food orders, restaurant data, and delivery tracking efficiently. It features user authentication, admin and customer dashboards, and real-time order status updates. Integrated Power BI dashboards provide advanced analytics and insights into orders and  delivery performance. Designed for a smooth and responsive user experience across all devices</h3></p>
+                         <p><h3>A photography-focused social media platform built using React, Spring Boot, and REST API. Users can upload, share, and explore photos, follow other photographers, and engage through likes and comments. The platform offers a smooth, responsive UI and secure backend services, enabling a dynamic and interactive photo-sharing experience.</h3></p>
                         <a href="https://github.com/IT22371836/Photography-Social-Media-Platform"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+            <a href="https://github.com/IT22371836" class="btn">See more</a>
         </div>
     </div>
 <!-------------------contact------------------->
@@ -131,16 +131,19 @@
             <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
         </div>
         <div class="contact-right">
-            <form>
+            <form name="submit-to-google-sheet">
                 <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="Email" placeholder="Your Email" required>
+                <input type="email" name="E-mail" placeholder="Your Email" required>
                 <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn btn2">Submit</button>
             </form>
+            <span id="msg"></span>
         </div>
     </div>
 </div>
-
+<div class="copyright">
+    <p>Copyright © Nadee</p>
+</div>
 
 <script>
 
@@ -159,6 +162,28 @@
     }
 
 </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw8VnKfCxSSB1jksgbCsuyKj2OG-bECMlIGfnIYF1MzuvSYxy4sOAlw6l19sIVTo53M/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => {
+                msg.innerHTML = "Error sending message"
+                console.error('Error!', error.message)
+            })
+    })
+</script>
+
 
 </body>
 </html>
