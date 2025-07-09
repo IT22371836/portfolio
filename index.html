@@ -3,210 +3,500 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio</title>
+    <title>Nadee Hewapathirana - Full Stack Developer</title>
+    <meta name="description" content="Full Stack Developer specializing in React, JavaScript, and modern web technologies. Creating beautiful and functional web applications.">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/429baa35fb.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<a href="#About" class="skip-link">Skip to main content</a>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="images/logo.png" class="logo" alt="Portfolio Logo">
-            <ul id="nav-menu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#Contact">Contact</a></li>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            
+            <div class="nav-actions">
+                <a href="images/my-cv.pdf" download class="btn btn-outline">Resume</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-        </nav>
-        <div class="header-text">
-            <div class="hero-content">
-                <span class="greeting">Hello, I'm</span>
-                <h1 class="name-animation">Nadee Hewapathirana</h1>
-                <h2 class="typing-text">Full Stack Developer</h2>
-                <p class="hero-description">Passionate about creating beautiful and functional web applications with modern technologies</p>
-                <div class="hero-buttons">
-                    <a href="#Contact" class="btn primary-btn">Get In Touch</a>
-                    <a href="images/my-cv.pdf" download class="btn secondary-btn">Download CV</a>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="scroll-arrow"></div>
-            </div>
+            </button>
         </div>
-     </div>
-  </div>
+    </nav>
 
-  <!-------------------about------------------->
-
-  <div id="About" class="fade-in-section">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <div class="image-container">
-                    <img src="images/user.jpg" alt="Nadee Hewapathirana">
-                </div>
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title slide-in-left">About Me</h1>
-
-                <p class="slide-in-left delay-1">
-                    Seeking an internship in frontend development (web & mobile) to enhance user interfaces and grow professionally. I am an enthusiastic Full Stack Developer and undergraduate with a strong foundation in front-end development. My top skills include HTML, CSS, JavaScript, ReactJS, and React Native. I am also proficient with the MERN stack, Spring Boot, and Java.
-                    My goal is to continuously learn and improve my skills while contributing to exciting projects.</p>
-                    <p class="slide-in-left delay-2" style="margin-top: 20px;">
-                    I am a 3rd year 2nd Semester undergraduate pursuing a degree in Information Technology at Sri Lanka Institute of Information Technology located in Malabe - Sri Lanka. I am dedicated to honing my talents and remaining at the forefront of digital innovation.
-                </p>
-                <p class="slide-in-left delay-3" style="margin-top: 20px;">
-                    Passionate frontend developer specializing in React. Creating web and mobile apps that are both beautiful and functional is my favorite. I have worked on different projects using various frameworks. I'm always learning, exploring new technologies and enhancing my skills to build innovative solutions.
-                </p>
-
-
-                <div class="tab-title slide-in-left delay-4">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab slide-in-up" id="skills">
-                    <div class="skills-grid">
-                        <div class="skill-item" data-skill="HTML"><span data-level="90%">HTML</span><div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div></div>
-                        <div class="skill-item" data-skill="CSS"><span data-level="85%">CSS</span><div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div></div>
-                        <div class="skill-item" data-skill="JavaScript"><span data-level="80%">JavaScript</span><div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div></div>
-                        <div class="skill-item" data-skill="React"><span data-level="75%">React</span><div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div></div>
-                        <div class="skill-item" data-skill="Java"><span data-level="70%">Java</span><div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div></div>
-                        <div class="skill-item" data-skill="SpringBoot"><span data-level="65%">SpringBoot</span><div class="skill-bar"><div class="skill-progress" data-width="65%"></div></div></div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="hero-grid"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content" id="main-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Available for opportunities
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Nadee</span><br>
+                        <span class="typing-text">Full Stack Developer</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        I create beautiful, responsive web applications using modern technologies. 
+                        Passionate about clean code, user experience, and innovative solutions.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Let's Talk</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-ghost">
+                            <span>View Work</span>
+                            <i class="fas fa-eye"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Years Learning</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">6+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
                     </div>
                 </div>
-                <div class="tab-contents slide-in-up" id="education">
-                    <ul>
-                        <li><span>Bachelor of Science(Hons) in Information Technology<br>2023 - present</span></li>
-                        <li><span>Complete Advanced Level in Physical Science Stream<br>2020</span></li>
-                    </ul>
+                
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <img src="images/user.jpg" alt="Nadee Hewapathirana">
+                        </div>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-text">Scroll to explore</div>
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
                 </div>
-            </div> 
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
-    </div>
-</div>
-<!-------------------portfolio------------------->
-<div id="portfolio" class="fade-in-section">
-    <div class="container">
-        <h1 class="sub-title text-center">My Projects</h1>
-        <div class="project-list">
-            <div class="project card-animation">
-                    <img src="images/project-1.jpg" alt="Online Taxi Reservation System">
-                    <div class="layer">
-                        <h2>Online Taxi Reservation System</h2>
-                        <p>An online taxi reservation system built with HTML, CSS, JavaScript, and PHP. It allows users to book rides easily, check availability, and manage reservations in real-time.</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Get to know me</div>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-description">
+                    Passionate developer dedicated to creating exceptional digital experiences
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <div class="card-content">
+                            <h3>My Journey</h3>
+                            <p>
+                                I'm a 3rd year Information Technology undergraduate at Sri Lanka Institute of Information Technology. 
+                                My journey in tech started with curiosity and has evolved into a passion for creating meaningful digital solutions.
+                            </p>
+                            <p>
+                                Seeking opportunities in frontend development to enhance user interfaces and grow professionally. 
+                                I specialize in the MERN stack, React Native for mobile development, and have experience with Java and Spring Boot.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-content">
+                            <h3>What I Do</h3>
+                            <p>
+                                I create web and mobile applications that are both beautiful and functional. 
+                                My focus is on writing clean, efficient code and delivering exceptional user experiences.
+                            </p>
+                            <p>
+                                Always learning and exploring new technologies to stay at the forefront of digital innovation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-section">
+                    <div class="skills-header">
+                        <h3>Skills & Technologies</h3>
+                        <div class="view-toggle">
+                            <button class="toggle-btn active" data-view="skills">Skills</button>
+                            <button class="toggle-btn" data-view="education">Education</button>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-content" id="skills-view">
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Frontend</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">HTML5</span>
+                                    <span class="skill-tag">CSS3</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">React Native</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4>Backend</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">Spring Boot</span>
+                                    <span class="skill-tag">PHP</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4>Database & Tools</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">MongoDB</span>
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Power BI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="education-content" id="education-view" style="display: none;">
+                        <div class="education-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Bachelor of Science (Hons) in Information Technology</h4>
+                                    <p class="institution">Sri Lanka Institute of Information Technology</p>
+                                    <p class="duration">2023 - Present</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Advanced Level - Physical Science Stream</h4>
+                                    <p class="institution">Completed</p>
+                                    <p class="duration">2020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Portfolio</div>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    A collection of projects that showcase my skills and passion for development
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-2.jpg" alt="Food Delivery Management System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/IT22371836/Food-Delivery-Management-System-full-project" 
+                                   target="_blank" class="project-link" aria-label="View source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Food Delivery Management System</h3>
+                            <span class="project-type">Featured</span>
+                        </div>
+                        
+                        <p class="project-description">
+                            A comprehensive full-stack web application built using the MERN stack. Features include 
+                            order management, restaurant data handling, delivery tracking, and analytics dashboard with Power BI integration.
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Power BI</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-4.jpg" alt="Photography Social Media Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/IT22371836/Photography-Social-Media-Platform" 
+                                   target="_blank" class="project-link" aria-label="View source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3 class="project-title">Photography Social Platform</h3>
+                        <p class="project-description">
+                            A photography-focused social media platform with photo sharing, interactive features, and community engagement.
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-1.jpg" alt="Online Taxi Reservation System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/IT22371836/Online-Taxi-Reservation-System" 
+                                   target="_blank" class="project-link" aria-label="View source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3 class="project-title">Taxi Reservation System</h3>
+                        <p class="project-description">
+                            Real-time taxi booking system with availability checking, reservation management, and user-friendly interface.
+                        </p>
+                        
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">PHP</span>
                         </div>
-                        <a href="https://github.com/IT22371836/Online-Taxi-Reservation-System" target="_blank" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="project card-animation">
-                    <img src="images/project-2.jpg" alt="Food Delivery Management System">
-                    <div class="layer">
-                         <h2>Food Delivery Management System</h2>
-                         <p>A full-stack web application built using the MERN stack to manage food orders, restaurant data, and delivery tracking efficiently with Power BI analytics.</p>
-                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Power BI</span>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-3.jpg" alt="Online Shopping Store">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/IT22371836/Online-E-Shopping-Store" 
+                                   target="_blank" class="project-link" aria-label="View source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
-                         <a href="https://github.com/IT22371836/Food-Delivery-Management-System-full-project" target="_blank" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="project card-animation">
-                    <img src="images/project-3.jpg" alt="Online Shopping Store">
-                    <div class="layer">
-                        <h2>Online Shopping Store</h2>
-                        <p>A fully functional online clothing store developed using Java. The system allows users to browse products, add items to cart, and place orders securely.</p>
+                    
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            Full-featured online clothing store with product browsing, cart management, and secure checkout process.
+                        </p>
+                        
                         <div class="project-tech">
                             <span class="tech-tag">Java</span>
                             <span class="tech-tag">Swing</span>
                             <span class="tech-tag">MySQL</span>
                         </div>
-                        <a href="https://github.com/IT22371836/Online-E-Shopping-Store" target="_blank" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="project card-animation">
-                    <img src="images/project-4.jpg" alt="Photography Social Media Platform">
-                    <div class="layer">
-                         <h2>Photography Social Media Platform</h2>
-                         <p>A photography-focused social media platform built using React, Spring Boot, and REST API. Users can upload, share, and explore photos with interactive features.</p>
-                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <a href="https://github.com/IT22371836/Photography-Social-Media-Platform" target="_blank" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
+                </article>
             </div>
-            <a href="https://github.com/IT22371836" target="_blank" class="btn primary-btn">See more projects</a>
+            
+            <div class="projects-footer">
+                <a href="https://github.com/IT22371836" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i>
+                    <span>View All Projects</span>
+                </a>
+            </div>
         </div>
-    </div>
-<!-------------------contact------------------->
-<div id="Contact" class="fade-in-section">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p class="contact-description">Let's work together to bring your ideas to life!</p>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Get in touch</div>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-description">
+                    Have a project in mind? Let's discuss how we can bring your ideas to life
+                </p>
+            </div>
+            
+            <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        <span>nadeehewapathirana987@gmail.com</span>
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:nadeehewapathirana987@gmail.com">nadeehewapathirana987@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <a href="tel:+94718890541">+94 71 889 0541</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <span>Malabe, Sri Lanka</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+94 71 889 0541</span>
+                    
+                    <div class="social-links">
+                        <h4>Connect with me</h4>
+                        <div class="social-grid">
+                            <a href="https://www.linkedin.com/in/nadee-hewapathirana-006562322/" target="_blank" class="social-link linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/IT22371836" target="_blank" class="social-link github">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.instagram.com/nadee_th?igsh=MWR1cm9reTgyMnRkcQ==" target="_blank" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-cta">
+                        <a href="images/my-cv.pdf" download class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            <span>Download Resume</span>
+                        </a>
                     </div>
                 </div>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/nadee-hewapathirana-006562322/" target="_blank" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/IT22371836" target="_blank" class="social-link"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/nadee_th?igsh=MWR1cm9reTgyMnRkcQ==" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                
+                <div class="contact-form-wrapper">
+                    <form name="submit-to-google-sheet" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="Name" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="E-mail" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="Subject" placeholder="Project Collaboration">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="Message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    
+                    <div id="form-status" class="form-status"></div>
                 </div>
-                <a href="images/my-cv.pdf" download class="btn secondary-btn">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="E-mail" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn primary-btn">Send Message</button>
-                </form>
-                <span id="msg"></span>
             </div>
         </div>
-    </div>
-</div>
-<div class="copyright">
-    <p>Copyright © Nadee</p>
-</div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Nadee Hewapathirana. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Back to top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-
-<script src="main.js"></script>
-
+    <script src="main.js"></script>
 </body>
 </html>

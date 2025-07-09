@@ -2,19 +2,6 @@
 // Author: Nadee Hewapathirana
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing portfolio...');
-    
-    // Test if buttons exist
-    const letsTalkBtn = document.querySelector('a[href="#contact"]');
-    const viewWorkBtn = document.querySelector('a[href="#projects"]');
-    const contactSection = document.getElementById('contact');
-    const projectsSection = document.getElementById('projects');
-    
-    console.log('Let\'s Talk button:', letsTalkBtn);
-    console.log('View Work button:', viewWorkBtn);
-    console.log('Contact section:', contactSection);
-    console.log('Projects section:', projectsSection);
-    
     initTheme();
     initNavigation();
     initSmoothScrolling();
@@ -24,8 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     initScrollEffects();
     initParallax();
-    
-    console.log('All functions initialized!');
 });
 
 // Theme Management
@@ -122,41 +107,19 @@ function updateActiveNavLink() {
 
 // Enhanced Smooth Scrolling
 function initSmoothScrolling() {
-    console.log('Initializing smooth scrolling...');
-    
-    // Handle all anchor links that start with #
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        console.log('Found anchor link:', anchor.getAttribute('href'));
-        
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const target = document.querySelector(targetId);
-            
-            console.log('Clicked link:', targetId);
-            console.log('Target element:', target);
-            
+            const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 const offsetTop = target.offsetTop - 70; // Account for fixed navbar
-                console.log('Scrolling to:', offsetTop);
-                
-                // Use smooth scrolling
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
                 });
-                
-                // Fallback for older browsers
-                if (window.scrollTo.toString().indexOf('behavior') === -1) {
-                    smoothScrollTo(offsetTop, 600);
-                }
-            } else {
-                console.error('Target not found:', targetId);
             }
         });
     });
-    
-    console.log('Smooth scrolling initialized for', document.querySelectorAll('a[href^="#"]').length, 'links');
 
     // Scroll indicator
     const scrollIndicator = document.querySelector('.scroll-indicator');
@@ -172,30 +135,6 @@ function initSmoothScrolling() {
             }
         });
     }
-}
-
-// Fallback smooth scroll function for older browsers
-function smoothScrollTo(targetPosition, duration) {
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
-
-    function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-    }
-
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-    }
-
-    requestAnimationFrame(animation);
 }
 
 // Enhanced Typing Animation
@@ -474,60 +413,4 @@ window.addEventListener('beforeprint', () => {
 
 window.addEventListener('afterprint', () => {
     document.body.classList.remove('printing');
-});
-
-// Test function to verify buttons work
-function testButtons() {
-    console.log('Testing buttons...');
-    
-    // Specifically target the hero action buttons
-    const letsTalkBtn = document.querySelector('.hero-actions a[href="#contact"]');
-    const viewWorkBtn = document.querySelector('.hero-actions a[href="#projects"]');
-    
-    if (letsTalkBtn) {
-        console.log('Let\'s Talk button found, adding click handler...');
-        letsTalkBtn.addEventListener('click', function(e) {
-            console.log('Let\'s Talk button clicked!');
-            e.preventDefault();
-            const contactSection = document.getElementById('contact');
-            if (contactSection) {
-                const offsetTop = contactSection.offsetTop - 70;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-                console.log('Scrolling to contact section at:', offsetTop);
-            } else {
-                console.error('Contact section not found!');
-            }
-        });
-    } else {
-        console.error('Let\'s Talk button not found!');
-    }
-    
-    if (viewWorkBtn) {
-        console.log('View Work button found, adding click handler...');
-        viewWorkBtn.addEventListener('click', function(e) {
-            console.log('View Work button clicked!');
-            e.preventDefault();
-            const projectsSection = document.getElementById('projects');
-            if (projectsSection) {
-                const offsetTop = projectsSection.offsetTop - 70;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-                console.log('Scrolling to projects section at:', offsetTop);
-            } else {
-                console.error('Projects section not found!');
-            }
-        });
-    } else {
-        console.error('View Work button not found!');
-    }
-}
-
-// Call test function after DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(testButtons, 100); // Run after other initializations
 });
